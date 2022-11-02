@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8" />
-    <canvas width="600" height="400">
-    </canvas>
-    <script>
-        let tela = document.querySelector('canvas');
-        let pincel = tela.getContext('2d');
-        pincel.fillRect(0, 0, 600, 400);
+  <meta charset="UTF-8" />
+  <div>
+    <canvas id="France" width="600" height="400"> </canvas>
+  </div>
+  <br />
+  <div>
+    <canvas id="Draw" width="600" height="400"></canvas>
+  </div>
+  <br />
+  <div>
+    <canvas id="Monster" width="600" height="400"></canvas>
+  </div>
+  <script>
+    //France Flag
+    let tela = document.getElementById("France");
+    let pincel = tela.getContext("2d");
 
-    </script>
+    pincel.fillStyle = "white";
+    pincel.fillRect(0, 0, 600, 400);
+
+    pincel.fillStyle = "blue";
+    pincel.fillRect(0, 0, 200, 400);
+
+    pincel.fillStyle = "red";
+    pincel.fillRect(400, 0, 200, 400);
+
+    //Flag
+    let tela2 = document.getElementById("Draw");
+    let pincel2 = tela2.getContext("2d");
+
+    pincel2.fillStyle = "lightgrey";
+    pincel2.fillRect(0, 0, 600, 400);
+
+    pincel2.fillStyle = "blue";
+    pincel2.fillRect(0, 0, 200, 400);
+
+    pincel2.fillStyle = "goldenrod";
+    pincel2.fillRect(400, 0, 200, 400);
+
+    pincel2.fillStyle = "yellow";
+    pincel2.beginPath();
+    pincel2.moveTo(300, 200);
+    pincel2.lineTo(200, 400);
+    pincel2.lineTo(400, 400);
+    pincel2.fill();
+
+    pincel2.fillStyle = "blue";
+    pincel2.beginPath();
+    pincel2.arc(300, 200, 50, 0, 2 * 3.14);
+    pincel2.fill();
+
+    //monster
+    let tela3 = document.getElementById("Monster");
+    let pincel3 = tela3.getContext("2d");
+
+    // cabeça
+    pincel3.fillStyle = "darkgreen";
+    pincel3.fillRect(200, 50, 350, 300);
+
+    // olhos
+    pincel3.fillStyle = "black";
+    pincel3.fillRect(250, 110, 90, 90);
+    pincel3.fillRect(410, 110, 90, 90);
+
+    // nariz
+    pincel3.fillRect(340, 200, 70, 100);
+
+    // boca ou barba
+    pincel3.fillRect(300, 240, 40, 110);
+    pincel3.fillRect(410, 240, 40, 110);
+  </script>
 </html>
