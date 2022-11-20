@@ -7,7 +7,7 @@ let arr = ['blue', 'red', 'green'];
 let indexColor = 0;
 
 function drawCircle(event) {
-    let x = event.pageX -tela.offsetLeft;
+    let x = event.pageX - tela.offsetLeft;
     let y = event.pageY - tela.offsetTop;
     pincel.fillStyle = arr[indexColor];
     pincel.beginPath();
