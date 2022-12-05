@@ -7,7 +7,7 @@ let arr = ["blue", "red", "green"];
 let indexColor = 0;
 let desenha = false;
 
-tela.onmousemove = function drawCircle(event) {
+tela.onmousemove = function drawnCircle(event) {
   let x = event.pageX - tela.offsetLeft;
   let y = event.pageY - tela.offsetTop;
 
